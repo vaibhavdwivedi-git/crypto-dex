@@ -59,7 +59,7 @@ export default function Home() {
     try {
       const provider = await getProviderOrSigner(false);
       const signer = await getProviderOrSigner(true);
-      const address = await signer.address();
+      const address = await signer.getAddress();
       const _ethBalance = await getEtherBalance(provider, address);
       const _cdBalance = await getCDTokensBalance(provider, address);
       const _lpBalance = await getLPTokensBalance(provider, address);
